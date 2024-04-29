@@ -1,0 +1,57 @@
+https://www.r-project.org
+https://www.rstudio.com
+
+
+
+
+# This is a comment
+# Print "Hello, World!" to the console
+print("Hello, World!")
+
+
+# Creating variables
+x <- 10
+y <- "Hello"
+
+# Printing variables
+print(x)
+print(y)
+
+# Checking data types
+class(x)
+class(y)
+
+
+# Creating a data frame
+data <- data.frame(
+  Name = c("Alice", "Bob", "Charlie"),
+  Age = c(25, 30, 35)
+)
+
+# Displaying the data frame
+print(data)
+
+
+# Basic operations
+a <- 5
+b <- 3
+
+sum <- a + b
+difference <- a - b
+product <- a * b
+quotient <- a / b
+remainder <- a %% b
+
+print(sum)
+print(difference)
+print(product)
+print(quotient)
+print(remainder)
+
+
+
+# Loading data from a CSV file
+my_data <- read.csv("my_data.csv")
+
+# Display the first few rows
+head(my_data)

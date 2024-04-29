@@ -1,0 +1,44 @@
+# Load the iris dataset
+data(iris)
+# Summarize the 'Sepal.Length' variable
+summary(iris$Sepal.Length)
+
+# Create a histogram for 'Sepal.Length'
+hist(iris$Sepal.Length, main="Histogram of Sepal Length", xlab="Sepal Length", ylab="Frequency", col="lightblue")
+
+# Create a boxplot for 'Sepal.Length'
+boxplot(iris$Sepal.Length, main="Boxplot of Sepal Length", ylab="Sepal Length", col="lightgreen")
+
+# Create a density plot for 'Sepal.Length'
+plot(density(iris$Sepal.Length), main="Density Plot of Sepal Length", xlab="Sepal Length", col="purple")
+
+
+# Calculate mean, median, and mode
+mean_sepal_length <- mean(iris$Sepal.Length)
+median_sepal_length <- median(iris$Sepal.Length)
+mode_sepal_length <- as.numeric(names(sort(table(iris$Sepal.Length), decreasing=TRUE)[1]))
+
+cat("Mean Sepal Length:", mean_sepal_length, "\n")
+cat("Median Sepal Length:", median_sepal_length, "\n")
+cat("Mode Sepal Length:", mode_sepal_length, "\n")
+
+Comparison and COntrast
+
+# Load the Iris dataset
+data(iris)
+
+# Calculate means for each species
+mean_by_species <- aggregate(. ~ Species, data=iris, mean)
+
+# Print the mean values by species
+print(mean_by_species)
+
+# Load the Iris dataset
+data(iris)
+
+# Create box plots to contrast attribute distributions by species
+par(mfrow=c(1,4))  # Create four plots side by side
+for (i in 1:4) {
+  boxplot(iris[,i] ~ iris$Species, xlab="Species", ylab=names(iris)[i], main=names(iris)[i])
+}
+

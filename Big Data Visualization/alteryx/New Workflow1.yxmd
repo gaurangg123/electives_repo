@@ -1,0 +1,170 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2023.1">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="102" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">D:\Studies\SEM 5\Big Data Visualization\mobiledataset.csv</File>
+          <FormatSpecificOptions>
+            <HeaderRow>True</HeaderRow>
+            <IgnoreErrors>False</IgnoreErrors>
+            <AllowShareWrite>False</AllowShareWrite>
+            <ImportLine>1</ImportLine>
+            <FieldLen>254</FieldLen>
+            <SingleThreadRead>False</SingleThreadRead>
+            <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+            <Delimeter>,</Delimeter>
+            <QuoteRecordBreak>False</QuoteRecordBreak>
+            <CodePage>28591</CodePage>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>mobiledataset.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="phone_name" size="254" source="File: D:\Studies\SEM 5\Big Data Visualization\mobiledataset.csv" type="V_String" />
+            <Field name="brand" size="254" source="File: D:\Studies\SEM 5\Big Data Visualization\mobiledataset.csv" type="V_String" />
+            <Field name="os" size="254" source="File: D:\Studies\SEM 5\Big Data Visualization\mobiledataset.csv" type="V_String" />
+            <Field name="inches" size="254" source="File: D:\Studies\SEM 5\Big Data Visualization\mobiledataset.csv" type="V_String" />
+            <Field name="resolution" size="254" source="File: D:\Studies\SEM 5\Big Data Visualization\mobiledataset.csv" type="V_String" />
+            <Field name="battery" size="254" source="File: D:\Studies\SEM 5\Big Data Visualization\mobiledataset.csv" type="V_String" />
+            <Field name="battery_type" size="254" source="File: D:\Studies\SEM 5\Big Data Visualization\mobiledataset.csv" type="V_String" />
+            <Field name="ram(GB)" size="254" source="File: D:\Studies\SEM 5\Big Data Visualization\mobiledataset.csv" type="V_String" />
+            <Field name="announcement_date" size="254" source="File: D:\Studies\SEM 5\Big Data Visualization\mobiledataset.csv" type="V_String" />
+            <Field name="weight(g)" size="254" source="File: D:\Studies\SEM 5\Big Data Visualization\mobiledataset.csv" type="V_String" />
+            <Field name="storage(GB)" size="254" source="File: D:\Studies\SEM 5\Big Data Visualization\mobiledataset.csv" type="V_String" />
+            <Field name="video_720p" size="254" source="File: D:\Studies\SEM 5\Big Data Visualization\mobiledataset.csv" type="V_String" />
+            <Field name="video_1080p" size="254" source="File: D:\Studies\SEM 5\Big Data Visualization\mobiledataset.csv" type="V_String" />
+            <Field name="video_4K" size="254" source="File: D:\Studies\SEM 5\Big Data Visualization\mobiledataset.csv" type="V_String" />
+            <Field name="video_8K" size="254" source="File: D:\Studies\SEM 5\Big Data Visualization\mobiledataset.csv" type="V_String" />
+            <Field name="video_30fps" size="254" source="File: D:\Studies\SEM 5\Big Data Visualization\mobiledataset.csv" type="V_String" />
+            <Field name="video_60fps" size="254" source="File: D:\Studies\SEM 5\Big Data Visualization\mobiledataset.csv" type="V_String" />
+            <Field name="video_120fps" size="254" source="File: D:\Studies\SEM 5\Big Data Visualization\mobiledataset.csv" type="V_String" />
+            <Field name="video_240fps" size="254" source="File: D:\Studies\SEM 5\Big Data Visualization\mobiledataset.csv" type="V_String" />
+            <Field name="video_480fps" size="254" source="File: D:\Studies\SEM 5\Big Data Visualization\mobiledataset.csv" type="V_String" />
+            <Field name="video_960fps" size="254" source="File: D:\Studies\SEM 5\Big Data Visualization\mobiledataset.csv" type="V_String" />
+            <Field name="price(USD)" size="254" source="File: D:\Studies\SEM 5\Big Data Visualization\mobiledataset.csv" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="198" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="phone_name" selected="True" />
+            <SelectField field="brand" selected="True" />
+            <SelectField field="battery" selected="True" />
+            <SelectField field="price(USD)" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="306" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File FileFormat="19" MaxRecords="">D:\Studies\SEM 5\Big Data Visualization\filteredmobiledataset.yxdb</File>
+          <Passwords />
+          <Disable>False</Disable>
+          <FormatSpecificOptions>
+            <NoSpatialIndex>False</NoSpatialIndex>
+            <SaveSource>True</SaveSource>
+            <WriteCompatibleVersion>False</WriteCompatibleVersion>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>filteredmobiledataset.yxdb</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>New Workflow1</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="e6cbaa79-0b1f-4b32-9f39-5f634609c44a" />
+      <Telemetry>
+        <PreviousWorkflowId value="769d8cc4-d84a-4240-bdce-f1d5005e6174" />
+        <OriginWorkflowId value="769d8cc4-d84a-4240-bdce-f1d5005e6174" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

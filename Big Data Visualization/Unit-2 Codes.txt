@@ -1,0 +1,104 @@
+
+#Mean: Calculate sum of all the values and divide it with the total number of values in the data set.
+x <- c(1,2,3,4,5,1,2,3,1,2,4,5,2,3,1,1,2,3,5,6) # our data set
+mean.result = mean(x) # calculate mean.
+print(mean.result)
+
+#Median: The middle value of the data set.
+x <- c(1,2,3,4,5,1,2,3,1,2,4,5,2,3,1,1,2,3,5,6) # our data set
+median.result = median(x) # calculate median
+print (median.result)
+
+#Mode: The most occurring number in the data set. For calculating mode, there is no default function in R. So, we have to create our own custom function.
+mode <- function(x) {
+       ux <- unique(x)
+       ux[which.max(tabulate(match(x, ux)))]
+  }
+
+x <- c(1,2,3,4,5,1,2,3,1,2,4,5,2,3,1,1,2,3,5,6) # our data set
+
+mode.result = mode(x) # calculate mode (with our custom function named ‘mode’)
+print (mode.result)
+
+#Variance: How far a set of data values are spread out from their mean.
+variance.result = var(x) # calculate variance
+print (variance.result)
+
+#Standard Deviation: A measure that is used to quantify the amount of variation or dispersion of a set of data values.
+sd.result = sqrt(var(x)) # calculate standard deviation
+print (sd.result)
+
+
+
+
+#working on airquality dataset
+
+# display airquality dataset
+print(airquality)
+
+# use dim() to get dimension of dataset
+cat("Dimension:",dim(airquality))
+
+# use nrow() to get number of rows
+cat("\nRow:",nrow(airquality))
+
+# use ncol() to get number of columns
+cat("\nColumn:",ncol(airquality))
+
+# use names() to get name of variable of dataset
+cat("\nName of Variables:",names(airquality))
+
+
+# display all values of Temp variable
+print(airquality$Temp)
+
+# sort values of Temp variable
+sort(airquality$Temp)
+
+
+# get statistical summary of Temp variable
+summary(airquality$Temp)
+
+
+# Horizontal Bar Plot for 
+# Ozone concentration in air
+barplot(airquality$Ozone, main = 'Ozone Concenteration in air',xlab = 'ozone levels', horiz = TRUE)
+
+
+# Vertical Bar Plot for 
+# Ozone concentration in air
+barplot(airquality$Ozone, main = 'Ozone Concenteration in air',xlab = 'ozone levels', col ='blue', horiz = FALSE)
+
+
+# Histogram for Maximum Daily Temperature
+data(airquality)
+
+hist(airquality$Temp, main ="La Guardia Airport's Maximum Temperature(Daily)", xlab ="Temperature(Fahrenheit)", xlim = c(50, 125), col ="yellow", freq = TRUE)
+
+# Box plot for average wind speed
+data(airquality)
+
+boxplot(airquality$Wind, main = "Average wind speed\
+at La Guardia Airport",
+        xlab = "Miles per hour", ylab = "Wind",
+        col = "orange", border = "brown",
+        horizontal = TRUE, notch = TRUE)
+
+
+# Multiple Box plots, each representing
+# an Air Quality Parameter
+boxplot(airquality[, 0:4], 
+        main ='Box Plots for Air Quality Parameters')
+
+
+# Scatter plot for Ozone Concentration per month
+data(airquality)
+
+plot(airquality$Ozone, airquality$Month,
+     main ="Scatterplot Example",
+     xlab ="Ozone Concentration in parts per billion",
+     ylab =" Month of observation ", pch = 19)
+
+
+
+
